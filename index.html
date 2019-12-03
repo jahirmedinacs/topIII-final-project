@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{ site.name }} - Hierarchy</title>
+  <title>Topicos 3 - Trabajo Final</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link type="text/css" rel="stylesheet" href="main.css">
@@ -23,106 +23,24 @@
   import * as THREE from './assets/build/three.module.js';
 
   import Stats from './assets/js/jsm/libs/stats.module.js';
-  import { GUI } from './assets/js/jsm/libs/dat.gui.module.js';
-
-  import { TrackballControls } from './assets/js/jsm/controls/TrackballControls.js';
 
   import {OBJLoader} from './assets/js/jsm/loaders/OBJLoader.js';
 
-  var perspectiveCamera, orthographicCamera, controls, scene, renderer, stats;
+  var camera, controls, scene, renderer, stats;
 
-  var humanHierarchy =
-          [
-            "head",
-            [
-              "shoulder",
-              [
-                "peck",
-                [
-                  "hip",
-                  [
-                    "belt",
-                    [
-                      "r_high_leg",
-                      [
-                        "r_knee",
-                        [
-                          "r_lower_leg",
-                          [
-                            "r_foot"
-                          ]
-                        ]
-                      ]
-                    ],
-                    [
-                      "l_high_leg",
-                      [
-                        "l_knee",
-                        [
-                          "l_lower_leg",
-                          [
-                            "l_foot"
-                          ]
-                        ]
-                      ]
-                    ]
-                  ]
-                ]
-              ],
-              [
-                "r_high_arm",
-                [
-                  "r_elbow",
-                  [
-                    "r_lower_arm",
-                    [
-                      "r_hand"
-                    ]
-                  ]
-                ]
-              ],
-              [
-                "l_high_arm",
-                [
-                  "l_elbow",
-                  [
-                    "l_lower_arm",
-                    [
-                      "l_hand"
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
-  ;
-
-  var humanBody = {};
-  var human = new THREE.Group();
-  threeNavigator(humanHierarchy, 0);
-
-
-  var params = {
-    orthographicCamera: false
-  };
-
-  var frustumSize = 400;
-
-  humanLoader(init);
+  init();
   animate();
 
   function init(objList) {
 
     var aspect = window.innerWidth / window.innerHeight;
 
-    perspectiveCamera = new THREE.PerspectiveCamera( 90, aspect, 1, 1000 );
-    perspectiveCamera.position.set(-20, 30, -10);
+    camera = new THREE.PerspectiveCamera( 90, aspect, 1, 1000 );
+    camera.position.set(110, 25, 0);
 
-    orthographicCamera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, 1, 1000 );
-    orthographicCamera.position.set(-20, 30, -10);
 
     scene = new THREE.Scene();
-    // perspectiveCamera.lookAt(scene.position);
+    camera.lookAt(0,25,0);
 
     let axes = new THREE.AxesHelper(100);
     scene.add(axes);
@@ -132,16 +50,16 @@
 
     // objects
 
-    let currentObj = null;
-    for(let ii=0; ii<objList.length; ii++){
-      currentObj = objList[ii]
-      humanBody[currentObj.name] = currentObj;
-      scene.add(currentObj);
-    }
+    const boxWidth = 100;
+    const boxHeight = 100;
+    const boxDepth = 100;
 
-    // hierarchyConstructor(humanHierarchy, human)
+    const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
 
-    scene.add(human);
+    const material = new THREE.MeshPhongMaterial({color: 0x44aa88});  // greenish blue
+
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
 
     // renderer
 
@@ -153,32 +71,9 @@
     stats = new Stats();
     document.body.appendChild( stats.dom );
 
-    //
-    initGui();
-    //
-
     window.addEventListener( 'resize', onWindowResize, false );
 
-    createControls( perspectiveCamera );
-
     render();
-
-  }
-
-  function createControls( camera ) {
-
-    controls = new TrackballControls( camera, renderer.domElement );
-
-    controls.rotateSpeed = 1.0;
-    controls.zoomSpeed = 1.2;
-    controls.panSpeed = 0.8;
-
-    controls.staticMoving = true;
-    controls.dynamicDampingFactor = 0.3;
-
-    controls.keys = [ 65, 83, 68 ];
-
-    controls.addEventListener( 'change', render );
 
   }
 
@@ -186,14 +81,8 @@
 
     var aspect = window.innerWidth / window.innerHeight;
 
-    perspectiveCamera.aspect = aspect;
-    perspectiveCamera.updateProjectionMatrix();
-
-    orthographicCamera.left = - frustumSize * aspect / 2;
-    orthographicCamera.right = frustumSize * aspect / 2;
-    orthographicCamera.top = frustumSize / 2;
-    orthographicCamera.bottom = - frustumSize / 2;
-    orthographicCamera.updateProjectionMatrix();
+    camera.aspect = aspect;
+    camera.updateProjectionMatrix();
 
     renderer.setSize( window.innerWidth, window.innerHeight );
 
@@ -209,142 +98,15 @@
   function animate() {
 
     requestAnimationFrame( animate );
-    controls.update();
     stats.update();
     render()
-
-    //hierarchy
-
   }
 
   function render() {
-
-    var camera = ( params.orthographicCamera ) ? orthographicCamera : perspectiveCamera;
-
     renderer.render( scene, camera );
-
   }
 
   //////////////////////////// Functions
-
-  function humanLoader(callback){
-    var childList = []
-    var childCounter = 0;
-    var loader = new OBJLoader();
-    loader.load( 'hierarchy/human.obj', function ( object ) {
-      object.name = "human";
-      let childName = "";
-      object.traverse( function ( child ) {
-        if ( child instanceof THREE.Mesh ) {
-
-          //Materials
-          childName = child.name;
-
-          if (childName.includes("head") || childName.includes("lower")){
-
-            child.material = new THREE.MeshPhongMaterial(
-                    {
-                      color: 0xf4a97a,
-                      shininess: 50
-                    }
-            );
-          }
-          else if (childName.includes("foot")){
-
-            child.material = new THREE.MeshPhysicalMaterial(
-                    {
-                      color: 0x072177,
-                      metalness: 0.6,
-                      clearcoat: 1,
-                    }
-            );
-          }
-          else if (childName.includes("hand")){
-
-            child.material = new THREE.MeshPhysicalMaterial(
-                    {
-                      color: 0x011106,
-                      metalness: 1,
-                      clearcoat: 1,
-                    }
-            );
-          }
-          else if (childName.includes("peck")){
-
-            child.material = new THREE.MeshPhysicalMaterial(
-                    {
-                      color: 0x0ea035,
-                      metalness: 0.3,
-                      clearcoat: 0.2,
-                    }
-            );
-          }
-          else if (childName.includes("shoulder")){
-
-            child.material = new THREE.MeshPhysicalMaterial(
-                    {
-                      color: 0xaa0627,
-                      metalness: 0.3,
-                      clearcoat: 0.2,
-                    }
-            );
-          }
-          else if (childName.includes("high")){
-
-            child.material = new THREE.MeshPhysicalMaterial(
-                    {
-                      color: 0x969407,
-                      metalness: 0.3,
-                      clearcoat: 0.2,
-                    }
-            );
-          }
-          else if (childName.includes("belt")){
-
-            child.material = new THREE.MeshPhysicalMaterial(
-                    {
-                      color: 0x079694,
-                      metalness: 0.3,
-                      clearcoat: 0.2,
-                    }
-            );
-          }
-          else if (childName.includes("hip")){
-
-            child.material = new THREE.MeshPhysicalMaterial(
-                    {
-                      color: 0xce1104,
-                      metalness: 0.3,
-                      clearcoat: 0.2,
-                    }
-            );
-          }
-          else{
-            child.material = new THREE.MeshLambertMaterial( { color: 0x0000ff, transparent: true, opacity: 0.8} );
-          }
-
-          child.geometry.computeVertexNormals();
-          childList.push(child);
-
-          childCounter++;
-        }
-      } );
-
-      callback(childList)
-    });
-  }
-
-  function initGui(){
-    var gui = new GUI();
-
-    gui.add( params, 'orthographicCamera' ).name( 'use orthographic' ).onChange( function ( value ) {
-      controls.dispose();
-      createControls( value ? orthographicCamera : perspectiveCamera );
-
-      render();
-    } );
-
-  }
 
   function skyBox() {
     let materialArray = [];
@@ -393,33 +155,6 @@
     floor.rotation.x = Math.PI / 2;
     scene.add(floor);
   }
-
-  function threeNavigator(root, level=0){
-    let current;
-    for(let ii=0; ii<root.length; ii++){
-      current = root[ii];
-      if (typeof current === 'string' || current instanceof String){
-        console.log("\t".repeat(level), level, current);
-      }
-      else{
-        threeNavigator(current, level + 1);
-      }
-    }
-  }
-
-  function hierarchyConstructor(root, parent=new THREE.Mesh()){
-    let current;
-    for(let ii=0; ii<root.length; ii++){
-      current = root[ii];
-      if (typeof current === 'string' || current instanceof String){
-        parent.add(humanBody[current]);
-      }
-      else{
-        parent.add(hierarchyConstructor(current, humanBody[current]));
-      }
-    }
-  }
-
 
 </script>
 
