@@ -4,7 +4,6 @@
   <title>Topicos 3 - Trabajo Final</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <link type="text/css" rel="stylesheet" href="main.css">
   <script src="./assets/js/webgl/gl-personal.js"></script>
   <style>
     body {
@@ -18,6 +17,48 @@
 </head>
 
 <body>
+
+<p id="errorMessage"></p>
+
+<video id="monitor" autoplay width="160" height="120" style="visibility: hidden; float:left;"></video>
+<canvas id="videoImage" width="160" height="120" style="visibility: hidden; float:left;"></canvas>
+
+<script type="text/javascript">
+  navigator.getUserMedia = navigator.mediaDevices.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+  window.URL = window.URL || window.webkitURL;
+
+  var camvideo = document.querySelector('#monitor');
+
+  if (!navigator.getUserMedia)
+  {
+    document.getElementById('errorMessage').innerHTML =
+            'Sorry. <code>navigator.getUserMedia()</code> is not available.';
+  } else {
+    navigator.getUserMedia({video: true}, gotStream, noStream);
+  }
+
+  function gotStream(stream)
+  {
+    if (window.URL)
+    {   camvideo.src = window.URL.createObjectURL(stream);   }
+    else // Opera
+    {   camvideo.src = stream;   }
+
+    camvideo.onerror = function(e)
+    {   stream.stop();   };
+
+    stream.onended = noStream;
+  }
+
+  function noStream(e)
+  {
+    var msg = 'No camera available.';
+    if (e.code == 1)
+    {   msg = 'User denied access to use camera.';   }
+    document.getElementById('errorMessage').textContent = msg;
+  }
+</script>
+
 <script type="module">
 
   import * as THREE from './assets/build/three.module.js';
@@ -26,8 +67,9 @@
 
   import {OBJLoader} from './assets/js/jsm/loaders/OBJLoader.js';
 
-  var camera, controls, scene, renderer, stats;
-
+  let camera, controls, scene, renderer, stats;
+  // Video
+  let video, videoImage, videoImageContext, videoTexture;
   init();
   animate();
 
@@ -49,17 +91,27 @@
     skyBox();
 
     // objects
+    video = document.getElementById( 'monitor' );
+
+    videoImage = document.querySelector('#videoImage');
+    videoImageContext = videoImage.getContext( '2d' );
+    // background color if no video present
+    videoImageContext.fillStyle = '#000000';
+    videoImageContext.fillRect( 0, 0, videoImage.width, videoImage.height );
+
+    videoTexture = new THREE.Texture( videoImage );
+    videoTexture.minFilter = THREE.LinearFilter;
+    videoTexture.magFilter = THREE.LinearFilter;
+
+    var movieMaterial = new THREE.MeshBasicMaterial( { map: videoTexture, side:THREE.DoubleSide } );
+    // the geometry on which the movie will be displayed;
+    // movie image will be scaled to fit these dimensions.
 
     const boxWidth = 100;
     const boxHeight = 100;
-    const boxDepth = 100;
-
-    const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
-
-    const material = new THREE.MeshPhongMaterial({color: 0x44aa88});  // greenish blue
-
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    var movieGeometry = new THREE.PlaneGeometry( boxWidth, boxHeight, 1, 1 );
+    var movieScreen = new THREE.Mesh( movieGeometry, movieMaterial );
+    scene.add(movieScreen);
 
     // renderer
 
@@ -103,6 +155,12 @@
   }
 
   function render() {
+    if ( video.readyState === video.HAVE_ENOUGH_DATA )
+    {
+      videoImageContext.drawImage( video, 0, 0, videoImage.width, videoImage.height );
+      if ( videoTexture )
+        videoTexture.needsUpdate = true;
+    }
     renderer.render( scene, camera );
   }
 
