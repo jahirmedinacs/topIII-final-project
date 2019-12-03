@@ -1,0 +1,7 @@
+"eyes"
+{
+	"$basetexture" "models/gordon/eyeball_r"
+	"$iris" "models/gordon/grn_pupil_r"
+	"$halflambert" 1
+	"$nodecal" "1"
+}

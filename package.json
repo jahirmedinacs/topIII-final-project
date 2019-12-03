@@ -1,0 +1,25 @@
+{
+  "name": "Topicos-III",
+  "version": "1.0.0",
+  "description": "Trabajo-Final",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/jahirmedinacs/topIII-final-project",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "jahirmedinacs",
+  "license": "",
+  "devDependencies": {
+    "electron": "^7.1.3"
+  },
+  "dependencies": {
+    "three": "^0.111.0"
+  }
+}

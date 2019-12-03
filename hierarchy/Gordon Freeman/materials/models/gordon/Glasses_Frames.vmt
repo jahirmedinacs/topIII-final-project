@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/gordon/Glasses_Frames"
+	"$surfaceprop" "flesh"
+	"$model" 1
+	"$nocull" 1
+} 
+
+
+
+
+
+
+
+

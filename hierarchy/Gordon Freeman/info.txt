@@ -1,0 +1,6 @@
+"AddonInfo"
+{
+	"name"				"Gordon Freeman"
+	"author_name"			"Mr. Crowbar"
+	"info"				"The protagonist of Half-Life."
+}

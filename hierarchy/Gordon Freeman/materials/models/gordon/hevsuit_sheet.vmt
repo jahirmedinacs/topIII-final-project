@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 	"Models/gordon/hevsuit_sheet"
+	"$bumpmap" "Models/gordon/hevsuit_normal"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapcontrast" 1
+  "$envmaptint" "[ 0.10 0.10 0.10 ]"
+}
