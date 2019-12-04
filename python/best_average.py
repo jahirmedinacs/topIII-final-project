@@ -33,4 +33,4 @@ arr=numpy.array(numpy.round(arr),dtype=numpy.uint8)
 
 # Generate, save and preview final image
 out=Image.fromarray(arr,mode="RGB")
-out.save(PATH + "Average.jpg")
+out.save("Average.jpg")

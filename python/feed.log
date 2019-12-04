@@ -13,28 +13,26 @@ Redistribute latency...
 /GstPipeline:pipeline0/GstDecodeBin:decodebin0/GstJpegDec:jpegdec0.GstPad:sink: caps = image/jpeg
 /GstPipeline:pipeline0/GstDecodeBin:decodebin0/GstTypeFindElement:typefind.GstPad:sink: caps = image/jpeg
 /GstPipeline:pipeline0/GstDecodeBin:decodebin0.GstGhostPad:sink: caps = image/jpeg
-/GstPipeline:pipeline0/GstDecodeBin:decodebin0/GstJpegDec:jpegdec0.GstPad:src: caps = video/x-raw, format=(string)I420, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)1:4:0:0, framerate=(fraction)0/1
-/GstPipeline:pipeline0/GstVideoFlip:videoflip0.GstPad:src: caps = video/x-raw, format=(string)I420, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)1:4:0:0, framerate=(fraction)0/1
-/GstPipeline:pipeline0/GstVideoConvert:videoconvert0.GstPad:src: caps = video/x-raw, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)0/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
-/GstPipeline:pipeline0/GstVideoScale:videoscale0.GstPad:src: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)4/3, framerate=(fraction)0/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
-/GstPipeline:pipeline0/GstVideoRate:videorate0.GstPad:src: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)4/3, framerate=(fraction)24/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
-/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:src: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)4/3, framerate=(fraction)24/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
-/GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0.GstPad:sink: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)4/3, framerate=(fraction)24/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
-/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:sink: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)4/3, framerate=(fraction)24/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
-/GstPipeline:pipeline0/GstVideoRate:videorate0.GstPad:sink: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)4/3, framerate=(fraction)0/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
-/GstPipeline:pipeline0/GstVideoScale:videoscale0.GstPad:sink: caps = video/x-raw, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)0/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
-/GstPipeline:pipeline0/GstVideoConvert:videoconvert0.GstPad:sink: caps = video/x-raw, format=(string)I420, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)1:4:0:0, framerate=(fraction)0/1
-/GstPipeline:pipeline0/GstVideoFlip:videoflip0.GstPad:sink: caps = video/x-raw, format=(string)I420, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)1:4:0:0, framerate=(fraction)0/1
-/GstPipeline:pipeline0/GstDecodeBin:decodebin0.GstDecodePad:src_0.GstProxyPad:proxypad1: caps = video/x-raw, format=(string)I420, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)1:4:0:0, framerate=(fraction)0/1
+/GstPipeline:pipeline0/GstDecodeBin:decodebin0/GstJpegDec:jpegdec0.GstPad:src: caps = video/x-raw, format=(string)I420, width=(int)960, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)1:4:0:0, framerate=(fraction)0/1
+/GstPipeline:pipeline0/GstVideoConvert:videoconvert0.GstPad:src: caps = video/x-raw, width=(int)960, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)0/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
+/GstPipeline:pipeline0/GstVideoScale:videoscale0.GstPad:src: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)0/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
+/GstPipeline:pipeline0/GstVideoRate:videorate0.GstPad:src: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)24/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:src: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)24/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
+/GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0.GstPad:sink: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)24/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:sink: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)24/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
+/GstPipeline:pipeline0/GstVideoRate:videorate0.GstPad:sink: caps = video/x-raw, width=(int)640, height=(int)480, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)0/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
+/GstPipeline:pipeline0/GstVideoScale:videoscale0.GstPad:sink: caps = video/x-raw, width=(int)960, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)0/1, format=(string)YUY2, colorimetry=(string)2:4:7:1
+/GstPipeline:pipeline0/GstVideoConvert:videoconvert0.GstPad:sink: caps = video/x-raw, format=(string)I420, width=(int)960, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)1:4:0:0, framerate=(fraction)0/1
+/GstPipeline:pipeline0/GstDecodeBin:decodebin0.GstDecodePad:src_0.GstProxyPad:proxypad1: caps = video/x-raw, format=(string)I420, width=(int)960, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)1:4:0:0, framerate=(fraction)0/1
 FOUND TAG      : found by element "v4l2sink0".
 container format: Multipart
 WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: Pipeline construction is invalid, please add queues.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(1209): gst_base_sink_query_latency (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+gstbasesink.c(1218): gst_base_sink_query_latency (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 Not enough buffering available for  the processing deadline of 0:00:00.015000000, add enough queues to buffer  0:00:00.015000000 additional data. Shortening processing latency to 0:00:00.000000000.
 WARNING: from element /GstPipeline:pipeline0: GStreamer error: clock problem.
 Additional debug info:
-../gstreamer/gst/gstbin.c(2774): gst_bin_do_latency_func (): /GstPipeline:pipeline0:
+gstbin.c(2773): gst_bin_do_latency_func (): /GstPipeline:pipeline0:
 Impossible to configure latency: max 0:00:00.000000000 < min 0:00:00.130000000. Add queues or other buffering elements.
 /GstPipeline:pipeline0/GstPulseSink:pulsesink0: volume = 1
 /GstPipeline:pipeline0/GstPulseSink:pulsesink0: mute = false
@@ -44,56 +42,135 @@ Impossible to configure latency: max 0:00:00.000000000 < min 0:00:00.130000000. 
 /GstPipeline:pipeline0/GstPulseSink:pulsesink0: current-device = ipwebcam
 WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 There may be a timestamping problem, or this computer is too slow.
 WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 There may be a timestamping problem, or this computer is too slow.
 WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 There may be a timestamping problem, or this computer is too slow.
 WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 There may be a timestamping problem, or this computer is too slow.
 WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 There may be a timestamping problem, or this computer is too slow.
 WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 There may be a timestamping problem, or this computer is too slow.
 WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 There may be a timestamping problem, or this computer is too slow.
-WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+ERROR: from element /GstPipeline:pipeline0/GstPulseSink:pulsesink0: The stream is of a different type than handled by this element.
 Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
-There may be a timestamping problem, or this computer is too slow.
-WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
-Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
-There may be a timestamping problem, or this computer is too slow.
-WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
-Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
-There may be a timestamping problem, or this computer is too slow.
-WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
-Additional debug info:
-../gstreamer/libs/gst/base/gstbasesink.c(3003): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
-There may be a timestamping problem, or this computer is too slow.
-handling interrupt.
-Interrupt: Stopping pipeline ...
-EOS on shutdown enabled -- Forcing EOS on the pipeline
+gstaudiobasesink.c(2228): gst_audio_base_sink_render (): /GstPipeline:pipeline0/GstPulseSink:pulsesink0:
+sink received buffer of wrong size.
+EOS on shutdown enabled -- waiting for EOS after Error
 Waiting for EOS...
-Got EOS from element "pipeline0".
-EOS received - stopping pipeline...
-Execution ended after 0:44:20.088438570
-Setting pipeline to PAUSED ...
-Setting pipeline to READY ...
-Setting pipeline to NULL ...
-Freeing pipeline ...
+ERROR: from element /GstPipeline:pipeline0/GstSoupHTTPSrc:souphttpsrc0: Internal data stream error.
+Additional debug info:
+gstbasesrc.c(3072): gst_base_src_loop (): /GstPipeline:pipeline0/GstSoupHTTPSrc:souphttpsrc0:
+streaming stopped, reason error (-5)
+ERROR: from element /GstPipeline:pipeline0/GstQueue:queue0: Internal data stream error.
+Additional debug info:
+gstqueue.c(988): gst_queue_handle_sink_event (): /GstPipeline:pipeline0/GstQueue:queue0:
+streaming stopped, reason error (-5)
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
