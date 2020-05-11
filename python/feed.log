@@ -5,7 +5,7 @@ Setting pipeline to PLAYING ...
 New clock: GstSystemClock
 /GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:src: caps = audio/x-raw, format=(string)S16LE, layout=(string)interleaved, rate=(int)44100, channels=(int)1
 /GstPipeline:pipeline0/GstQueue:queue0.GstPad:sink: caps = audio/x-raw, format=(string)S16LE, layout=(string)interleaved, rate=(int)44100, channels=(int)1
-/GstPipeline:pipeline0/GstQueue:queue0.GstPad:src: caps = audio/x-raw, format=(string)S16LE, layout=(string)interleaved, rate=(int)44100, channels=(int)1
+/GstPipeline:pipeline0/GstQueue:queue0.GstPad:sink: caps = audio/x-raw, format=(string)S16LE, layout=(string)interleaved, rate=(int)44100, channels=(int)1
 Redistribute latency...
 /GstPipeline:pipeline0/GstPulseSink:pulsesink0.GstPad:sink: caps = audio/x-raw, format=(string)S16LE, layout=(string)interleaved, rate=(int)44100, channels=(int)1
 /GstPipeline:pipeline0/GstDecodeBin:decodebin0.GstGhostPad:sink.GstProxyPad:proxypad0: caps = image/jpeg
@@ -252,13 +252,425 @@ WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buf
 Additional debug info:
 gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
 There may be a timestamping problem, or this computer is too slow.
-ERROR: from element /GstPipeline:pipeline0/GstSoupHTTPSrc:souphttpsrc1: Server does not support seeking.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-gstsouphttpsrc.c(1621): gst_soup_http_src_do_request (): /GstPipeline:pipeline0/GstSoupHTTPSrc:souphttpsrc1:
-Server does not accept Range HTTP header, URL: http://192.168.1.137:8080/videofeed, Redirect to: (NULL)
-EOS on shutdown enabled -- waiting for EOS after Error
-Waiting for EOS...
-ERROR: from element /GstPipeline:pipeline0/GstSoupHTTPSrc:souphttpsrc1: Internal data stream error.
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
 Additional debug info:
-gstbasesrc.c(3072): gst_base_src_loop (): /GstPipeline:pipeline0/GstSoupHTTPSrc:souphttpsrc1:
-streaming stopped, reason error (-5)
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(3005): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+Got EOS from element "pipeline0".
+Execution ended after 0:04:26.484409639
+Setting pipeline to PAUSED ...
+Setting pipeline to READY ...
+Setting pipeline to NULL ...
+Freeing pipeline ...

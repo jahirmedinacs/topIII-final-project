@@ -149,7 +149,7 @@ ADB_FLAGS=
 # IP_VERSION=4
 
 # IP used by the phone in your wireless network
-WIFI_IP=192.168.1.137
+WIFI_IP=192.168.43.1
 
 # Port on which IP Webcam is listening
 PORT=8080
