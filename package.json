@@ -17,7 +17,7 @@
   "author": "jahirmedinacs",
   "license": "",
   "devDependencies": {
-    "electron": "^7.1.3"
+    "electron": "^11.5.0"
   },
   "dependencies": {
     "three": "^0.111.0"
